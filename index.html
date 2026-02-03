@@ -1,56 +1,116 @@
-<!DOCTYPE html>  <html lang="es">  
-<head>  
-  <meta charset="UTF-8">  
-  <title>Gorros Importados | BASSE</title>  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <style>  
-    body {  
-      margin: 0;  
-      font-family: Arial, Helvetica, sans-serif;  
-      background: #0b1220;  
-      color: #f1f5f9;  
-    }  
-  
-    section {  
-      max-width: 900px;  
-      margin: auto;  
-      padding: 60px 20px;  
-    }  
-  
-    img {  
-      width: 100%;  
-      border-radius: 20px;  
-      margin-bottom: 20px;  
-    }  
-  
-    h1 {  
-      font-size: 38px;  
-    }  
-  
-    .price {  
-      font-size: 22px;  
-      color: #38bdf8;  
-      font-weight: bold;  
-      margin: 10px 0;  
-    }  
-  
-    a.button {  
-      display: inline-block;  
-      margin-top: 30px;  
-      padding: 14px 32px;  
-      background: #2563eb;  
-      color: white;  
-      border-radius: 40px;  
-      text-decoration: none;  
-      font-weight: bold;  
-    }  
-  </style>  </head>  <body>  <section>  
-  <h1>Gorros Importados</h1>    <img src="gorros.jpg">    <p>  
-    Línea de gorros importados de alta rotación, ideales para reventa.  
-    Productos seleccionados para comercio mayorista.  
-  </p>    <p><strong>• Gorro Borin</strong></p>  
-  <div class="price">USD 4,85</div>    <p><strong>• Gorro Urbano</strong></p>  
-  <div class="price">USD 4,70</div>    <a class="button" href="https://wa.me/5490000000000" target="_blank">  
-    Consultar por WhatsApp  
-  </a>  
-</section>  </body>  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>BASSE Importadora & Mayorista</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b1220;
+      color: #f1f5f9;
+    }
+
+    header {
+      background: linear-gradient(135deg, #020617, #0b1220);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 52px;
+      letter-spacing: 8px;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 34px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    a.card {
+      background: #020617;
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #f1f5f9;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+    }
+
+    a.card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    a.card h3 {
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>BASSE</h1>
+  <p>Importadora & Mayorista</p>
+</header>
+
+<section>
+  <h2>Catálogo de Productos</h2>
+
+  <div class="grid">
+
+    <a class="card" href="producto-hogar.html">
+      <img src="hogarpremium.jpg">
+      <h3>Producto Hogar Premium</h3>
+    </a>
+
+    <a class="card" href="electronica.html">
+      <img src="producto2.jpg">
+      <h3>Electrónica Importada</h3>
+    </a>
+
+    <a class="card" href="escolar.html">
+      <img src="eescolar.jpg">
+      <h3>Artículo escolar</h3>
+    </a>
+
+    <a class="card" href="gorros.html">
+      <img src="gorros.jpg">
+      <h3>Gorros Importados</h3>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 BASSE Importadora & Mayorista
+</footer>
+
+</body>
 </html>
