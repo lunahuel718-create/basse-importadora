@@ -42,76 +42,25 @@
       margin-top: 40px;
     }
 
-    .card {
+    a.card {
       background: #020617;
       border-radius: 18px;
       padding: 20px;
       text-align: center;
-      cursor: pointer;
+      text-decoration: none;
+      color: #f1f5f9;
       box-shadow: 0 15px 40px rgba(0,0,0,0.45);
     }
 
-    .card img {
+    a.card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 14px;
     }
 
-    .card h3 {
+    a.card h3 {
       margin-top: 15px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 30px;
-      background: #2563eb;
-      color: white;
-      border-radius: 40px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-
-    .modal-content {
-      background: #020617;
-      padding: 30px;
-      border-radius: 20px;
-      max-width: 400px;
-      width: 90%;
-      text-align: center;
-      position: relative;
-    }
-
-    .modal-content img {
-      width: 100%;
-      border-radius: 14px;
-      margin-bottom: 15px;
-    }
-
-    .price {
-      font-size: 20px;
-      color: #38bdf8;
-      margin: 10px 0;
-      font-weight: bold;
-    }
-
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 22px;
-      cursor: pointer;
     }
 
     footer {
@@ -132,95 +81,36 @@
 </header>
 
 <section>
-  <h2>Productos Destacados</h2>
+  <h2>Catálogo de Productos</h2>
 
   <div class="grid">
 
-    <div class="card" onclick="openModal('modal1')">
+    <a class="card" href="producto-hogar.html">
       <img src="producto1.jpg">
       <h3>Producto Hogar Premium</h3>
-    </div>
+    </a>
 
-    <div class="card" onclick="openModal('modal2')">
+    <a class="card" href="electronica.html">
       <img src="producto2.jpg">
       <h3>Electrónica Importada</h3>
-    </div>
+    </a>
 
-    <div class="card" onclick="openModal('modal3')">
+    <a class="card" href="bazar.html">
       <img src="producto3.jpg">
       <h3>Artículo de Bazar</h3>
-    </div>
+    </a>
 
-    <div class="card" onclick="openModal('modalGorros')">
+    <a class="card" href="gorros.html">
       <img src="gorros.jpg">
       <h3>Gorros Importados</h3>
-    </div>
+    </a>
 
   </div>
 </section>
 
-<!-- MODALES -->
-
-<div class="modal" id="modal1">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal1')">✕</span>
-    <img src="producto1.jpg">
-    <h3>Producto Hogar Premium</h3>
-    <div class="price">$12.500</div>
-    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
-  </div>
-</div>
-
-<div class="modal" id="modal2">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal2')">✕</span>
-    <img src="producto2.jpg">
-    <h3>Electrónica Importada</h3>
-    <div class="price">$8.900</div>
-    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
-  </div>
-</div>
-
-<div class="modal" id="modal3">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal3')">✕</span>
-    <img src="producto3.jpg">
-    <h3>Artículo de Bazar</h3>
-    <div class="price">$6.300</div>
-    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
-  </div>
-</div>
-
-<div class="modal" id="modalGorros">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modalGorros')">✕</span>
-    <img src="gorros.jpg">
-    <h3>Gorros Importados</h3>
-
-    <p><strong>Gorro Borin</strong></p>
-    <div class="price">USD 4,85</div>
-
-    <p><strong>Gorro Urbano</strong></p>
-    <div class="price">USD 4,70</div>
-
-    <a class="button" href="https://wa.me/5490000000000" target="_blank">
-      Consultar por WhatsApp
-    </a>
-  </div>
-</div>
-
 <footer>
   © 2026 BASSE Importadora & Mayorista
 </footer>
-
-<script>
-  function openModal(id) {
-    document.getElementById(id).style.display = "flex";
-  }
-  function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
-</script>
 
 </body>
 </html>
