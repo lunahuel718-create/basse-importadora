@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Gorros Importados | BASSE</title>
+  <title>BASSE Importadora | Catálogo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -13,64 +13,201 @@
       color: #f1f5f9;
     }
 
-    section {
-      max-width: 900px;
-      margin: auto;
+    header {
+      background: linear-gradient(135deg, #020617, #0b1220);
       padding: 60px 20px;
+      text-align: center;
     }
 
-    img {
+    header h1 {
+      font-size: 50px;
+      letter-spacing: 6px;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
       width: 100%;
-      border-radius: 20px;
-      margin-bottom: 20px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
     }
 
-    h1 {
-      font-size: 38px;
+    .card h3 {
+      margin-top: 15px;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: #020617;
+      padding: 30px;
+      border-radius: 18px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-content img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 15px;
     }
 
     .price {
       font-size: 22px;
       color: #38bdf8;
       font-weight: bold;
-      margin: 10px 0;
+      margin: 15px 0;
     }
 
-    a.button {
+    .button {
       display: inline-block;
-      margin-top: 30px;
-      padding: 14px 32px;
+      margin-top: 20px;
+      padding: 14px 36px;
       background: #2563eb;
       color: white;
       border-radius: 40px;
       text-decoration: none;
       font-weight: bold;
     }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      opacity: 0.8;
+      margin-top: 40px;
+    }
   </style>
 </head>
 
 <body>
 
+<header>
+  <h1>BASSE Importadora</h1>
+  <p>Catálogo de Productos Mayoristas</p>
+</header>
+
 <section>
-  <h1>Gorros Importados</h1>
+  <h2>Productos Destacados</h2>
 
-  <img src="gorros.jpg">
+  <div class="grid">
+    <!-- Producto Hogar Premium -->
+    <div class="card" onclick="openModal('modalHogar')">
+      <img src="hogar.jpg" alt="Producto Hogar Premium">
+      <h3>Producto Hogar Premium</h3>
+    </div>
 
-  <p>
-    Línea de gorros importados de alta rotación, ideales para reventa.
-    Productos seleccionados para comercio mayorista.
-  </p>
+    <!-- Electrónica Importada -->
+    <div class="card" onclick="openModal('modalElectronica')">
+      <img src="electronica.jpg" alt="Electrónica Importada">
+      <h3>Electrónica Importada</h3>
+    </div>
 
-  <p><strong>• Gorro Borin</strong></p>
-  <div class="price">USD 4,85</div>
-
-  <p><strong>• Gorro Urbano</strong></p>
-  <div class="price">USD 4,70</div>
-
-  <a class="button" href="https://wa.me/5490000000000" target="_blank">
-    Consultar por WhatsApp
-  </a>
+    <!-- Escolar -->
+    <div class="card" onclick="openModal('modalEscolar')">
+      <img src="escolar.jpg" alt="Escolar">
+      <h3>Escolar</h3>
+    </div>
+  </div>
 </section>
+
+<!-- MODALES -->
+<div class="modal" id="modalHogar">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalHogar')">✕</span>
+    <img src="hogar.jpg" alt="Producto Hogar Premium">
+    <h3>Producto Hogar Premium</h3>
+    <p>Producto importado de alta calidad, ideal para reventa y distribución mayorista.</p>
+    <div class="price">Consultar precio</div>
+    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
+  </div>
+</div>
+
+<div class="modal" id="modalElectronica">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalElectronica')">✕</span>
+    <img src="electronica.jpg" alt="Electrónica Importada">
+    <h3>Electrónica Importada</h3>
+    <p>Alta rotación · Ideal para revendedores y comercios.</p>
+    <div class="price">Consultar precio</div>
+    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
+  </div>
+</div>
+
+<div class="modal" id="modalEscolar">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalEscolar')">✕</span>
+    <img src="escolar.jpg" alt="Escolar">
+    <h3>Escolar</h3>
+    <p>Artículos escolares de alta rotación, ideales para comercios mayoristas.</p>
+    <div class="price">Consultar precio</div>
+    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
+  </div>
+</div>
+
+<footer>
+  © 2026 BASSE Importadora & Mayorista
+</footer>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "flex";
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+</script>
 
 </body>
 </html>
