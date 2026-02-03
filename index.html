@@ -62,7 +62,6 @@
       margin-top: 15px;
     }
 
-    /* BOTÓN */
     .button {
       display: inline-block;
       margin-top: 15px;
@@ -74,7 +73,6 @@
       font-weight: bold;
     }
 
-    /* MODAL */
     .modal {
       display: none;
       position: fixed;
@@ -153,6 +151,11 @@
       <h3>Artículo de Bazar</h3>
     </div>
 
+    <div class="card" onclick="openModal('modalGorros')">
+      <img src="gorros.jpg">
+      <h3>Gorros Importados</h3>
+    </div>
+
   </div>
 </section>
 
@@ -163,7 +166,6 @@
     <span class="close" onclick="closeModal('modal1')">✕</span>
     <img src="producto1.jpg">
     <h3>Producto Hogar Premium</h3>
-    <p>Calidad importada · Venta mayorista</p>
     <div class="price">$12.500</div>
     <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
   </div>
@@ -174,7 +176,6 @@
     <span class="close" onclick="closeModal('modal2')">✕</span>
     <img src="producto2.jpg">
     <h3>Electrónica Importada</h3>
-    <p>Ideal para reventa</p>
     <div class="price">$8.900</div>
     <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
   </div>
@@ -185,9 +186,26 @@
     <span class="close" onclick="closeModal('modal3')">✕</span>
     <img src="producto3.jpg">
     <h3>Artículo de Bazar</h3>
-    <p>Alta rotación comercial</p>
     <div class="price">$6.300</div>
     <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
+  </div>
+</div>
+
+<div class="modal" id="modalGorros">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalGorros')">✕</span>
+    <img src="gorros.jpg">
+    <h3>Gorros Importados</h3>
+
+    <p><strong>Gorro Borin</strong></p>
+    <div class="price">USD 4,85</div>
+
+    <p><strong>Gorro Urbano</strong></p>
+    <div class="price">USD 4,70</div>
+
+    <a class="button" href="https://wa.me/5490000000000" target="_blank">
+      Consultar por WhatsApp
+    </a>
   </div>
 </div>
 
