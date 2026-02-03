@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Escolar | BASSE Importadora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {margin:0; font-family: Arial, Helvetica, sans-serif; background:#0b1220; color:#f1f5f9;}
+    header{text-align:center; padding:60px 20px; background:#020617;}
+    header h1{font-size:42px; margin-bottom:5px;}
+    header p{font-size:18px; opacity:0.9;}
+    section{max-width:1100px; margin:auto; padding:40px 20px;}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px;}
+    .card{background:#020617; border-radius:16px; padding:20px; text-align:center; cursor:pointer; box-shadow:0 10px 30px rgba(0,0,0,0.4); transition: transform 0.2s;}
+    .card:hover{transform:translateY(-5px);}
+    .card img{width:100%; height:180px; object-fit:cover; border-radius:12px;}
+    .card h3{margin-top:10px; font-size:20px;}
+    .card p{margin-top:5px; font-size:14px; color:#a1a1a1;}
+
+    /* MODAL */
+    .modal{display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:999;}
+    .modal-content{background:#020617; padding:30px; border-radius:18px; max-width:500px; width:90%; text-align:center; position:relative;}
+    .modal-content img{width:100%; border-radius:14px; margin-bottom:15px;}
+    .price{font-size:22px; color:#38bdf8; font-weight:bold; margin:15px 0;}
+    .button{display:inline-block; margin-top:20px; padding:14px 36px; background:#2563eb; color:white; border-radius:40px; text-decoration:none; font-weight:bold;}
+    .close{position:absolute; top:10px; right:15px; font-size:22px; cursor:pointer;}
+    a.back{display:inline-block; margin-top:25px; color:#38bdf8; text-decoration:none;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Escolar</h1>
+  <p>Material escolar – Venta Mayorista</p>
+</header>
+
+<section>
+  <div class="grid">
+    <!-- Producto 1 -->
+    <div class="card" onclick="openModal('producto1')">
+      <img src="escolar1.jpg" alt="Cuaderno Premium">
+      <h3>Cuaderno Premium</h3>
+      <p>Mini descripción del producto</p>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="card" onclick="openModal('producto2')">
+      <img src="escolar2.jpg" alt="Set de Lápices">
+      <h3>Set de Lápices</h3>
+      <p>Mini descripción del producto</p>
+    </div>
+  </div>
+</section>
+
+<!-- MODALES -->
+<div class="modal" id="producto1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('producto1')">✕</span>
+    <img src="escolar1.jpg" alt="Cuaderno Premium">
+    <h3>Cuaderno Premium</h3>
+    <p>Descripción completa: Cuaderno de alta calidad, hojas blancas lisas, ideal para colegios y estudiantes.</p>
+    <div class="price">USD 2,50</div>
+    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar por WhatsApp</a>
+  </div>
+</div>
+
+<div class="modal" id="producto2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('producto2')">✕</span>
+    <img src="escolar2.jpg" alt="Set de Lápices">
+    <h3>Set de Lápices</h3>
+    <p>Descripción completa: Set de lápices de colores de alta calidad, ideal para manualidades y estudiantes.</p>
+    <div class="price">USD 3,20</div>
+    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar por WhatsApp</a>
+  </div>
+</div>
+
+<a class="back" href="index.html">← Volver al Catálogo</a>
+
+<script>
+function openModal(id){document.getElementById(id).style.display="flex";}
+function closeModal(id){document.getElementById(id).style.display="none";}
+</script>
+
+</body>
+</html>
