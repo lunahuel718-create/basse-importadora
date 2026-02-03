@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>BASSE Importadora & Mayorista</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BASSE Importadora y Mayorista. Distribución de productos para comercios en todo el país.">
 
   <style>
     body {
@@ -23,13 +22,6 @@
     header h1 {
       font-size: 52px;
       letter-spacing: 8px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      opacity: 0.9;
-      margin-bottom: 30px;
     }
 
     section {
@@ -39,9 +31,8 @@
     }
 
     h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
       text-align: center;
+      font-size: 34px;
     }
 
     .grid {
@@ -54,9 +45,10 @@
     .card {
       background: #020617;
       border-radius: 18px;
-      padding: 30px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+      padding: 20px;
       text-align: center;
+      cursor: pointer;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.45);
     }
 
     .card img {
@@ -64,40 +56,70 @@
       height: 200px;
       object-fit: cover;
       border-radius: 14px;
-      margin-bottom: 15px;
     }
 
     .card h3 {
-      margin: 10px 0;
-      font-size: 20px;
+      margin-top: 15px;
     }
 
-    .price {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 10px 0 20px;
-      color: #38bdf8;
-    }
-
-    a.button {
+    /* BOTÓN */
+    .button {
       display: inline-block;
-      padding: 14px 32px;
+      margin-top: 15px;
+      padding: 12px 30px;
       background: #2563eb;
       color: white;
       border-radius: 40px;
       text-decoration: none;
       font-weight: bold;
-      letter-spacing: 1px;
     }
 
-    a.button:hover {
-      background: #1e40af;
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: #020617;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-content img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: #38bdf8;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      cursor: pointer;
     }
 
     footer {
       background: #020617;
       text-align: center;
-      padding: 35px;
+      padding: 30px;
       font-size: 14px;
       opacity: 0.8;
     }
@@ -109,59 +131,78 @@
 <header>
   <h1>BASSE</h1>
   <p>Importadora & Mayorista</p>
-  <a class="button" href="https://wa.me/5490000000000" target="_blank">
-    Contacto Comercial
-  </a>
 </header>
-
-<section>
-  <h2>Sobre Nosotros</h2>
-  <p style="text-align:center; max-width:800px; margin:auto;">
-    BASSE es una empresa dedicada a la importación y comercialización mayorista
-    de productos para el hogar, electrónica y consumo general.
-    Trabajamos con comercios, distribuidores y revendedores en todo el país,
-    priorizando volumen, continuidad y relaciones comerciales sólidas.
-  </p>
-</section>
 
 <section>
   <h2>Productos Destacados</h2>
 
   <div class="grid">
 
-    <div class="card">
-      <img src="producto1.jpg" alt="Producto hogar">
+    <div class="card" onclick="openModal('modal1')">
+      <img src="producto1.jpg">
       <h3>Producto Hogar Premium</h3>
-      <div class="price">$12.500 (Mayorista)</div>
-      <a class="button" href="https://wa.me/5490000000000" target="_blank">
-        Consultar
-      </a>
     </div>
 
-    <div class="card">
-      <img src="producto2.jpg" alt="Producto electrónico">
+    <div class="card" onclick="openModal('modal2')">
+      <img src="producto2.jpg">
       <h3>Electrónica Importada</h3>
-      <div class="price">$8.900 (Mayorista)</div>
-      <a class="button" href="https://wa.me/5490000000000" target="_blank">
-        Consultar
-      </a>
     </div>
 
-    <div class="card">
-      <img src="producto3.jpg" alt="Producto bazar">
+    <div class="card" onclick="openModal('modal3')">
+      <img src="producto3.jpg">
       <h3>Artículo de Bazar</h3>
-      <div class="price">$6.300 (Mayorista)</div>
-      <a class="button" href="https://wa.me/5490000000000" target="_blank">
-        Consultar
-      </a>
     </div>
 
   </div>
 </section>
 
+<!-- MODALES -->
+
+<div class="modal" id="modal1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">✕</span>
+    <img src="producto1.jpg">
+    <h3>Producto Hogar Premium</h3>
+    <p>Calidad importada · Venta mayorista</p>
+    <div class="price">$12.500</div>
+    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
+  </div>
+</div>
+
+<div class="modal" id="modal2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">✕</span>
+    <img src="producto2.jpg">
+    <h3>Electrónica Importada</h3>
+    <p>Ideal para reventa</p>
+    <div class="price">$8.900</div>
+    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
+  </div>
+</div>
+
+<div class="modal" id="modal3">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">✕</span>
+    <img src="producto3.jpg">
+    <h3>Artículo de Bazar</h3>
+    <p>Alta rotación comercial</p>
+    <div class="price">$6.300</div>
+    <a class="button" href="https://wa.me/5490000000000" target="_blank">Consultar</a>
+  </div>
+</div>
+
 <footer>
-  © 2026 BASSE Importadora & Mayorista · Todos los derechos reservados
+  © 2026 BASSE Importadora & Mayorista
 </footer>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = "flex";
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+</script>
 
 </body>
 </html>
