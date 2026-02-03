@@ -1,110 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>BASSE Importadora & Mayorista</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>BASSE Importadora | Catálogo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b1220;
-      color: #f1f5f9;
-    }
-
-    header {
-      background: linear-gradient(135deg, #020617, #0b1220);
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 52px;
-      letter-spacing: 8px;
-    }
-
-    section {
-      padding: 70px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 34px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    a.card {
-      background: #020617;
-      border-radius: 18px;
-      padding: 20px;
-      text-align: center;
-      text-decoration: none;
-      color: #f1f5f9;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.45);
-    }
-
-    a.card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 14px;
-    }
-
-    a.card h3 {
-      margin-top: 15px;
-    }
-
-    footer {
-      background: #020617;
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      opacity: 0.8;
-    }
-  </style>
+<style>
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#0b1220;
+  color:#f1f5f9;
+}
+header {
+  text-align:center;
+  padding:60px 20px;
+  background: linear-gradient(135deg,#020617,#0b1220);
+}
+header h1 {font-size:50px; letter-spacing:6px;}
+section {max-width:1100px; margin:auto; padding:40px 20px;}
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:30px;
+}
+.card {
+  background:#020617;
+  border-radius:16px;
+  padding:20px;
+  text-align:center;
+  cursor:pointer;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+  transition:transform 0.2s;
+}
+.card:hover {transform:translateY(-5px);}
+.card img {width:100%; height:180px; object-fit:cover; border-radius:12px;}
+.card h3 {margin-top:15px;}
+footer {
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  opacity:0.8;
+  margin-top:40px;
+}
+</style>
 </head>
-
 <body>
 
 <header>
-  <h1>BASSE</h1>
-  <p>Importadora & Mayorista</p>
+  <h1>BASSE Importadora</h1>
+  <p>Catálogo de Productos Mayoristas</p>
 </header>
 
 <section>
-  <h2>Catálogo de Productos</h2>
-
+  <h2>Categorías</h2>
   <div class="grid">
-
-    <a class="card" href="producto-hogar.html">
-      <img src="Hogarpremium.jpg">
-      <h3>Producto Hogar Premium</h3>
+    <a href="gorros.html" class="card">
+      <img src="gorros.jpg" alt="Gorros">
+      <h3>Gorros</h3>
     </a>
-
-    <a class="card" href="electronica.html">
-      <img src="Electrónica importada.jpg">
-      <h3>Electrónica Importada</h3>
+    <a href="escolar.html" class="card">
+      <img src="escolar.jpg" alt="Escolar">
+      <h3>Escolar</h3>
     </a>
-
-    <a class="card" href="Artículos escolares.html">
-      <img src="eescolar.jpg">
-      <h3>Artículos escolares</h3>
+    <a href="electronica.html" class="card">
+      <img src="electronica.jpg" alt="Electrónica">
+      <h3>Electrónica</h3>
     </a>
-
-    <a class="card" href="gorros.html">
-      <img src="Gorroos.jpg">
-      <h3>Gorros Importados</h3>
-    </a>
-
   </div>
 </section>
 
